@@ -18,13 +18,7 @@
   <default target-element="Activity" target-attr="notice-o" value="-3" />
   <default target-element="Activity" target-attr="sync-s" value="-10" />
   <default target-element="Activity" target-attr="sync-e" value="10" />
-
-  <!-- トリガ スペスペに登録してもいい TLロード時のみ有効 -->
-  <t text="石像見ない"     sync="惰眠の神気 on 神々の像"             notice="見ない、見ちゃダメ" />
-  <t text="石像見る"       sync="アヴェ・マリア on 神々の像"         notice="見るよ、見るんだよ" />
-  <t text="左が安置"       sync="神々の像 starts using 撲殺の神気"   notice="左が安置" />
-  <t text="右が安置"       sync="神々の像 starts using 重力波"       notice="右が安置" />
-
+  
   <!-- 名前部分をDPSの誰かに変更して使う -->
   <t text="DPS中央・ヒラタン外周"   sync="神々の像 starts using 睡魔の神気 on DPSの誰かの名前" />
   <t text="DPS外周・ヒラタン中央"   sync="神々の像 starts using 聖母の神気 on DPSの誰かの名前" />
@@ -114,14 +108,14 @@
 
   <!-- ゴッドケフカの定義 begin -->
   <s name="PHASE1 心ない大天使" >
-    <a time="0" text="心ない天使" sync="「心ない天使」の構え" notice-o="1" notice="HP１になるよ" icon="HP1強制.png" />
+    <a time="0" text="心ない天使" sync="「心ない天使」の構え" notice-o="1" icon="HP1強制.png" />
     <a time="6" text="アルテマ" sync="「アルテマ」の構え" notice="全体攻撃" icon="全体攻撃.png" />
     <a time="13" text="ハイパードライブ" sync="「ハイパードライブ」の構え" notice="MT大ダメージ、近寄らない" icon="単体強攻撃.png" />
     <a time="21" text="スリースターズ" sync="「スリースターズ」の構え" notice="スリースターズ" />
     <a time="31" text="アルテマ" sync="「アルテマ」の構え" notice="全体攻撃" icon="全体攻撃.png" />
     <a time="42" text="ミッシング" sync="「ミッシング」の構え" notice="ミッシングくるよ、HP頑張ってぜんかい" icon="全体強攻撃.png" />
     <a time="53" text="心ない大天使" sync="「心ない大天使」の構え" notice="大天使くるよ" />
-    <a time="67" text="破壊の翼(両翼)" sync="「破壊の翼」の構え" notice="ST離れる、配置しっかり" />
+    <a time="67" text="破壊の翼(両翼)" sync="「破壊の翼」の構え" />
     <a time="73" text="アルテマ" sync="「アルテマ」の構え" notice="全体攻撃、HP全快させて" icon="全体攻撃.png" />
     <a time="83" text="心ない大天使" sync="「心ない大天使」の構え" notice="大天使くるよ" />
     <a time="98" text="裁きの光" sync="「裁きの光」の構え" notice="軽減いれて" icon="全体強攻撃.png" />
@@ -130,10 +124,10 @@
 
   <s name="PHASE2 トライン" >
     <a time="0" text="トライン1" notice="安置探して" notice-o="1" />
-    <a time="6" text="破壊の翼(片翼)" sync="「破壊の翼」の構え" notice="左右どちらか見て" />
-    <a time="18" text="破壊の翼(両翼)" sync="「破壊の翼」の構え" notice="ST離れる、配置注意" />
+    <a time="6" text="破壊の翼(片翼)" sync="「破壊の翼」の構え" />
+    <a time="18" text="破壊の翼(両翼)" sync="「破壊の翼」の構え" />
     <a time="35" text="アルテマ" sync="「アルテマ」の構え" notice="全体攻撃" icon="全体攻撃.png" />
-    <a time="42" text="未来/過去の破滅" notice="一旦背面集合" icon="背面集合.png" />
+    <a time="42" text="未来/過去の破滅" icon="背面集合.png" />
     <a time="53" text="終末の双腕" sync="「終末の双腕」の構え" notice="しゅうまつくるよ" icon="単体強攻撃.png" />
     <a time="60" text="ハイパードライブ" sync="「ハイパードライブ」の構え" notice="MT大ダメージ、近寄らない" icon="単体強攻撃.png" />
     <a time="67" text="アルテマ" sync="「アルテマ」の構え" notice="全体攻撃" icon="全体攻撃.png" />
@@ -143,7 +137,7 @@
 
   <s name="PHASE3 妖星乱舞" >
     <a time="0" text="妖星乱舞" />
-    <a time="5" text="未来/過去の終焉" sync="の終焉」の構え。" notice="どちらか覚えて" />
+    <a time="5" text="未来/過去の終焉" sync="の終焉」の構え。" />
     <a time="14" text="消滅の脚" sync="「消滅の脚」の構え" notice="ケフカの向き注意" />
     <a time="23" text="裁きの光" sync="「裁きの光」の構え" notice="全体大ダメージ、HP全快、フル軽減" icon="全体強攻撃.png" />
     <t text="PHASE4 大トラインへ" sync="「スリースターズ」の構え" goto="PHASE4 大トライン" />
@@ -151,11 +145,11 @@
 
   <s name="PHASE4 大トライン" >
     <a time="0" text="スリースターズ" sync="「スリースターズ」の構え" notice="スリースターズくるよ" notice-o="1" />
-    <a time="9" text="破壊の翼(片翼)" notice="左右どちらか見て" />
+    <a time="9" text="破壊の翼(片翼)" />
     <a time="15" text="アルテマ" sync="「アルテマ」の構え" notice="全体攻撃" icon="全体攻撃.png" />
     <a time="33" text="大トライン" sync="「トライン」の構え" notice="中央確認" />
-    <a time="40" text="未来/過去の破滅" sync="の破滅」の構え" notice="一旦背面集合" icon="背面集合.png" />
-    <a time="53" text="破壊の翼(両翼)" sync="「破壊の翼」の構え" notice="ST離れる、配置注意" />
+    <a time="40" text="未来/過去の破滅" sync="の破滅」の構え" icon="背面集合.png" />
+    <a time="53" text="破壊の翼(両翼)" sync="「破壊の翼」の構え" />
     <a time="58" text="終末の双腕" sync="「終末の双腕」の構え" notice="しゅうまつくるよ" icon="単体強攻撃.png" />
     <a time="66" text="ハイパードライブ" sync="「ハイパードライブ」の構え" notice="MT大ダメージ、近寄らない" icon="単体強攻撃.png" />
     <a time="74" text="アルテマ" sync="「アルテマ」の構え" notice="アルテマからミッシングへ続くよ" icon="全体攻撃.png" />
@@ -170,20 +164,20 @@
     <a time="27" text="睡眠混乱処理" />
     <a time="34" text="アルテマ" sync="「アルテマ」の構え" notice="全体攻撃、HPすぐに全快して" icon="全体攻撃.png" />
     <a time="42" text="心ない大天使" sync="「心ない大天使」の構え" notice="大天使くるよ" />
-    <a time="55" text="破壊の翼(両翼)" notice="ST離れて、DPS4人で光の波動入る" />
+    <a time="55" text="破壊の翼(両翼)" />
     <a time="60" text="アルテマ" sync="「アルテマ」の構え" notice="全体攻撃" icon="全体攻撃.png" />
-    <a time="67" text="破壊の翼(片翼)" sync="「破壊の翼」の構え" notice="ボスは西に向いてますか、安置を判断する" />
+    <a time="67" text="破壊の翼(片翼)" sync="「破壊の翼」の構え" />
     <a time="73" text="裁きの光" sync="「裁きの光」の構え" notice="全体大ダメージ、HP全快、フル軽減" icon="全体強攻撃.png" />
     <t text="PHASE6 トラインへ" sync="「トライン」の構え" goto="PHASE6 トライン" />
   </s>
 
   <s name="PHASE6 トライン" >
     <a time="0" text="トライン" notice="安置を探して" notice-o="1"/>
-    <a time="6" text="破壊の翼(片翼)" sync="「破壊の翼」の構え" notice="左右どちらか見て" />
-    <a time="17" text="破壊の翼(両翼)" sync="「破壊の翼」の構え" notice="STスプリント、戻ってしゅうまつ" />
+    <a time="6" text="破壊の翼(片翼)" sync="「破壊の翼」の構え" />
+    <a time="17" text="破壊の翼(両翼)" sync="「破壊の翼」の構え" />
     <a time="23" text="終末の双腕" sync="「終末の双腕」の構え" notice="しゅうまつくるよ、いそげー" icon="単体強攻撃.png" />
     <a time="40" text="大トライン" sync="「トライン」の構え" notice="中央確認" />
-    <a time="48" text="未来/過去の破滅" notice="一旦背面集合" icon="背面集合.png" />
+    <a time="48" text="未来/過去の破滅" icon="背面集合.png" />
     <a time="60" text="ハイパードライブ" sync="「ハイパードライブ」の構え" icon="単体強攻撃.png" />
     <a time="67" text="アルテマ" sync="「アルテマ」の構え" notice="全体攻撃2連続" icon="全体攻撃.png" />
     <a time="75" text="アルテマ" sync="「アルテマ」の構え" notice="全体攻撃" icon="全体攻撃.png" />
@@ -198,9 +192,9 @@
     <a time="27" text="睡眠混乱処理" />
     <a time="34" text="アルテマ" sync="「アルテマ」の構え" notice="全体攻撃、HPすぐに全快して" icon="全体攻撃.png" />
     <a time="42" text="心ない大天使" sync="「心ない大天使」の構え" notice="大天使くるよ" />
-    <a time="55" text="破壊の翼(両翼)" notice="ST離れて、DPS4人で光の波動入る" />
+    <a time="55" text="破壊の翼(両翼)" />
     <a time="60" text="アルテマ" sync="「アルテマ」の構え" notice="全体攻撃" icon="全体攻撃.png" />
-    <a time="67" text="破壊の翼(片翼)" sync="「破壊の翼」の構え" notice="ボスは西に向いてますか、安置を判断する" />
+    <a time="67" text="破壊の翼(片翼)" sync="「破壊の翼」の構え" />
     <a time="74" text="アルテマ" notice="全体攻撃5連続" icon="全体攻撃.png" />
     <a time="82" text="アルテマ" notice="2回目" icon="全体攻撃.png" />
     <a time="90" text="アルテマ" notice="3回目" icon="全体攻撃.png" />
